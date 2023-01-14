@@ -30,7 +30,7 @@ RUN     apt-get update \
         apt-get clean \
         && \
         rm -rf /var/cache/dnf/*
-# 202MB -> 648MB
+
 
 
 RUN /bin/dbus-uuidgen --ensure && \
