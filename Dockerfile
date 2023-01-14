@@ -15,6 +15,7 @@ ENV HOME=/home/headless
 
 RUN     apt-get update \
         && apt-get install -y \
+            apt-utils \
             tigervnc-standalone-server \
             tigervnc-common \
             openbox obconf-qt \
