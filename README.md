@@ -9,6 +9,11 @@ All other software you can install yourself.
 
 ![Docker LXQt Desktop access via TightVNC Client](https://raw.githubusercontent.com/LabEG/centos-lxqt-vnc/master/.pics/vnc_container_view.jpg)
 
+## usage
+Собираем
+```sh
+docker build -t iahtoh/debian-lxqt-vnc https://github.com/iAHTOH/debian-lxqt-vnc.git
+
 
 ### Try
 If you just want to try the features:
