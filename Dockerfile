@@ -43,7 +43,7 @@ RUN /bin/dbus-uuidgen --ensure && \
 COPY ./startup.sh ${HOME}
 RUN mkdir -p ${HOME}/.vnc \
         && \
-        #echo '#!/bin/bash' > ${HOME}/.vnc/xstartup && \
+        echo '#!/bin/bash' > ${HOME}/.vnc/xstartup && \
         echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
         chmod 775 ${HOME}/.vnc/xstartup \
         && \
