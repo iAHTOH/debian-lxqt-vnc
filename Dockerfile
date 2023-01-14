@@ -13,7 +13,8 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN apt install -y \
+RUN     apt-get update \
+        && apt-get install -y \
             tigervnc-server \
             openbox obconf-qt \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
@@ -25,7 +26,7 @@ RUN apt install -y \
         && \
         strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 \
         && \
-        apt clean \
+        apt-get clean \
         && \
         rm -rf /var/cache/dnf/*
 # 202MB -> 648MB
