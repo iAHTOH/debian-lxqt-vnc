@@ -1,5 +1,5 @@
 # Docker image with LXQt Desktop over headless VNC environments
-### Centos is replaced by Fedora after [this news](https://blog.centos.org/2020/12/future-is-centos-stream/).
+### Буду делать на Debian
 
 This repository contains a Docker image with minimal Desktop installation and includes: Fedora minimal + OpenBox + LXQt + TigerVNC-Server.
 
