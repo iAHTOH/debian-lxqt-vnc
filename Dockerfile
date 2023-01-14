@@ -25,9 +25,7 @@ RUN     apt-get update \
             xterm nano htop expect sudo \
             passwd binutils wget \
         && \
-        ls /usr/lib64/
-        && \
-        strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 \
+        ls /usr/lib64/ &&   strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 \
         && \
         apt-get clean \
         && \
