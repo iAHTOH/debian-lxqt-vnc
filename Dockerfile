@@ -15,12 +15,13 @@ ENV HOME=/home/headless
 
 RUN     apt-get update \
         && apt-get install -y \
-            tigervnc-server \
+            tigervnc-standalone-server \
+            tigervnc-common \
             openbox obconf-qt \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-session pcmanfm-qt \
-            dejavu-sans-mono-fonts \
+            #dejavu-sans-mono-fonts \
             xterm nano htop expect sudo \
             passwd binutils wget \
         && \
