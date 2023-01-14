@@ -1,19 +1,19 @@
 
-FROM fedora:37
+FROM debian:bullseye
 
 
-LABEL maintainer="labeg@mail.ru" \
+LABEL maintainer="admin@iahtoh.ru" \
       io.k8s.description="Headless VNC Container with LXQt Desktop manager" \
-      io.k8s.display-name="Headless VNC Container based on Centos" \
+      io.k8s.display-name="Headless VNC Container based on Debian" \
       io.openshift.expose-services="5901:xvnc" \
-      io.openshift.tags="vnc, centos, lxqt" \
+      io.openshift.tags="vnc, debian, lxqt" \
       io.openshift.non-scalable=true
 
 
 ENV HOME=/home/headless
 
 
-RUN dnf install -y \
+RUN apt install -y \
             tigervnc-server \
             openbox obconf-qt \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
@@ -25,7 +25,7 @@ RUN dnf install -y \
         && \
         strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 \
         && \
-        dnf clean all \
+        apt clean \
         && \
         rm -rf /var/cache/dnf/*
 # 202MB -> 648MB
@@ -33,8 +33,8 @@ RUN dnf install -y \
 
 RUN /bin/dbus-uuidgen --ensure && \
         useradd headless && \
-        echo "centos" | passwd --stdin root && \
-        echo "centos" | passwd --stdin headless && \
+        echo "debian" | passwd --stdin root && \
+        echo "debian" | passwd --stdin headless && \
         usermod -aG wheel headless
 
 
