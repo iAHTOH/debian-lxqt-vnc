@@ -13,7 +13,7 @@ All other software you can install yourself.
 Собираем
 ```sh
 docker build -t iahtoh/debian-lxqt-vnc https://github.com/iAHTOH/debian-lxqt-vnc.git
-
+```
 
 ### Try
 If you just want to try the features:
