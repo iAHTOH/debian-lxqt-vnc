@@ -1,5 +1,5 @@
 
-FROM debian:scratch
+FROM debian:stable-slim
 
 
 LABEL maintainer="admin@iahtoh.ru" \
