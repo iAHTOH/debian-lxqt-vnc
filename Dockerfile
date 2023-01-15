@@ -34,7 +34,7 @@ RUN     apt-get update \
 
 
 RUN /usr/bin/dbus-uuidgen --ensure && \
-        useradd headless && \
+        useradd -m headless && \
         addgroup wheel && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
