@@ -1,5 +1,5 @@
 
-FROM scratch
+FROM debian:scratch
 
 
 LABEL maintainer="admin@iahtoh.ru" \
