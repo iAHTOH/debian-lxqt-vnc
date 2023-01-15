@@ -1,7 +1,7 @@
 # Docker image with LXQt Desktop over headless VNC environments
 ### Буду делать на Debian
 
-This repository contains a Docker image with minimal Desktop installation and includes: Fedora minimal + OpenBox + LXQt + TigerVNC-Server.
+This repository contains a Docker image with minimal Desktop installation and includes: Debian + OpenBox + LXQt + TigerVNC-Server.
 
 The Image is automatically rebuilt every day, at midnight by GMT.
 
