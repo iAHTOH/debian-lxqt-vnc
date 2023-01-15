@@ -1,5 +1,5 @@
 
-FROM debian:bullseye
+FROM scratch
 
 
 LABEL maintainer="admin@iahtoh.ru" \
