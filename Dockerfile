@@ -33,7 +33,7 @@ RUN     apt-get update \
 
 
 
-RUN /bin/dbus-uuidgen --ensure && \
+RUN /usr/bin/dbus-uuidgen --ensure && \
         useradd headless && \
         echo "debian" | passwd --stdin root && \
         echo "debian" | passwd --stdin headless && \
@@ -44,7 +44,7 @@ COPY ./startup.sh ${HOME}
 
 RUN mkdir -p ${HOME}/.vnc \
         && \
-        echo '#!/bin/bash' > ${HOME}/.vnc/xstartup && \
+        echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
         echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
         chmod 775 ${HOME}/.vnc/xstartup \
         && \
