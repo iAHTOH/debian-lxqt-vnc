@@ -18,13 +18,13 @@ docker build -t iahtoh/debian-lxqt-vnc https://github.com/iAHTOH/debian-lxqt-vnc
 ### Try
 If you just want to try the features:
 ```sh
-docker run -it --rm -e password='YOUR_VNC_PASSWORD' -p 5901:5901 labeg/centos-lxqt-vnc
+docker run -it --rm -e password='YOUR_VNC_PASSWORD' -p 5901:5901  iahtoh/debian-lxqt-vnc:latest 
 ```
 
 ### Use
 If you want to use the container regularly:
 ```sh
-docker run -d --restart always -e password='YOUR_VNC_PASSWORD' -p 5901:5901 labeg/centos-lxqt-vnc
+docker run -d --restart always -e password='YOUR_VNC_PASSWORD' -p 5901:5901  iahtoh/debian-lxqt-vnc:latest 
 ```
 
 ### Parameters
@@ -42,5 +42,5 @@ docker run -d --restart always -e password='YOUR_VNC_PASSWORD' -p 5901:5901 labe
 ### Build
 
 ```sh
-docker build -t labeg/centos-lxqt-vnc .
+docker build -t  iahtoh/debian-lxqt-vnc:latest  .
 ```
