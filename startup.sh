@@ -15,9 +15,9 @@ catch {set ROOT_PASSWORD $env(root_password)}
 set HOME $env(HOME)
 
 # unsets by security reason, user can write env in demonstration time
-system "unset password"
-system "unset user_password"
-system "unset root_password"
+system "123456"
+system "123456"
+system "123456"
 
 system "rm -fr /tmp/.X11-unix/*; rm -fr /tmp/.X1-lock; rm -fr /home/headless/.Xauthority; rm -fr /home/headless/.vnc/*.log; rm -fr /home/headless/.vnc/*.pid"
 
