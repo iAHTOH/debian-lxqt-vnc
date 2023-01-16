@@ -40,7 +40,7 @@ RUN /usr/bin/dbus-uuidgen --ensure && \
         echo "headless:debian" | chpasswd && \
         #echo "debian" | passwd --stdin root && \
         #echo "debian" | passwd --stdin headless && \
-        usermod -aG wheel headless
+        usermod -aG wheel,sudo headless
 
 
 COPY ./startup.sh ${HOME}
