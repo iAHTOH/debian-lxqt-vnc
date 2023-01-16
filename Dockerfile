@@ -18,12 +18,12 @@ RUN     apt-get update \
             tigervnc-standalone-server \
             tigervnc-common \
             openbox obconf-qt \
-            #lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
-            #lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
-            #lxqt-session pcmanfm-qt \
+            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
+            lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
+            lxqt-session \
             #dejavu-sans-mono-fonts \
             pcmanfm-qt \
-            lxqt-core \
+            dbus-x11 \
             xterm nano htop expect sudo \
             passwd binutils wget \
         && \
