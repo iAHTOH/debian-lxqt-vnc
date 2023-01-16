@@ -13,8 +13,9 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN     apt-get update \
-        && apt-get install -y --no-install-recommends\
+RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections &&\
+            apt-get update &&\
+            apt-get install -y -q --no-install-recommends\
             tigervnc-standalone-server \
             tigervnc-common \
             openbox obconf-qt \
