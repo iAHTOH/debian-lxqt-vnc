@@ -13,9 +13,8 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections &&\
-            apt-get update &&\
-            apt-get install -y -q --no-install-recommends\
+RUN         apt-get update &&\
+            apt-get install -y\
             tigervnc-standalone-server \
             tigervnc-common \
             openbox obconf-qt \
@@ -38,12 +37,10 @@ RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-
 
 RUN /usr/bin/dbus-uuidgen --ensure && \
         useradd -m headless && \
-        addgroup wheel && \
+        #addgroup wheel && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
-        #echo "debian" | passwd --stdin root && \
-        #echo "debian" | passwd --stdin headless && \
-        usermod -aG wheel,sudo headless
+        usermod -aG sudo headless
 
 
 COPY ./startup.sh ${HOME}
