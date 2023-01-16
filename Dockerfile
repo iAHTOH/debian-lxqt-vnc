@@ -23,7 +23,7 @@ RUN     apt-get update \
             #lxqt-session pcmanfm-qt \
             #dejavu-sans-mono-fonts \
             pcmanfm-qt \
-            task-lxqt-desktop \
+            lxqt-core \
             xterm nano htop expect sudo \
             passwd binutils wget \
         && \
