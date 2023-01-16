@@ -24,8 +24,8 @@ RUN     apt-get update \
             #dejavu-sans-mono-fonts \
             xterm nano htop expect sudo \
             passwd binutils wget \
-        #&& \
-        # strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 \
+        && \
+        strip --remove-section=.note.ABI-tag /usr/x86_64-linux-gnu/libQt5Core.so.5 \
         && \
         apt-get clean \
         && \
