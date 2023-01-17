@@ -18,11 +18,12 @@ RUN         apt-get update && \
             tigervnc-standalone-server tigervnc-common \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd liblxqt-l10n \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
-            lxqt-session featherpad nano xterm \   
-        && \
-        apt-get clean \
-        && \
-        rm -rf /var/lib/apt/lists/*
+            lxqt-theme-debian lxqt-branding-debian lxqt-session \
+            featherpad nano xterm \   
+            && \
+            apt-get clean \
+            && \
+            rm -rf /var/lib/apt/lists/*
 
 RUN     /usr/bin/dbus-uuidgen --ensure && \
         useradd -m headless && \
