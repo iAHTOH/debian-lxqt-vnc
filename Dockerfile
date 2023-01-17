@@ -13,8 +13,9 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN         apt-get update &&                              \
-            apt-get install -y                             \
+RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections &&\
+            apt-get update &&                              \
+            apt-get install -y -q                          \
             xorg                                           \
             tightvncserver                                 \
             autocutsel                                     \
