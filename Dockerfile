@@ -18,7 +18,7 @@ RUN         apt-get update && \
             tigervnc-standalone-server tigervnc-common \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
-            lxqt-session featherpad    
+            lxqt-session featherpad \   
         && \
         apt-get clean \
         && \
