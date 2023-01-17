@@ -13,28 +13,29 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN         apt-get update &&\
-            apt-get install -y\
-            tigervnc-standalone-server \
-            tigervnc-common \
-            openbox obconf-qt \
-            lxqt-core \
-            #lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
-            #lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
-            #lxqt-session \
+RUN         apt-get update &&                              \
+            apt-get install -y                             \
+            xorg                                           \
+            tightvncserver                                 \
+            autocutsel                                     \
+            openbox obconf-qt                              \
+            #lxqt-core \
+            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
+            lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
+            lxqt-session \
             #dejavu-sans-mono-fonts \
             pcmanfm-qt \
             #dbus-x11 xorg \
             xterm nano htop expect sudo \
             passwd binutils wget mc \
-        #&& \
-        #strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5 \
+        && \
+        strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5 \
         && \
         apt-get clean \
         && \
         rm -rf /var/cache/dnf/*
 
-
+EXPOSE 5901
 
 RUN /usr/bin/dbus-uuidgen --ensure && \
         useradd -m headless && \
@@ -46,7 +47,7 @@ RUN /usr/bin/dbus-uuidgen --ensure && \
 
 COPY ./startup.sh ${HOME}
 
-RUN mkdir -p ${HOME}/.vnc \
+RUN     mkdir -p ${HOME}/.vnc \
         && \
         echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
         echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
@@ -58,7 +59,8 @@ RUN mkdir -p ${HOME}/.vnc \
 WORKDIR ${HOME}
 USER headless
 
-
+# Disable the screen saver
+ADD .xscreensaver .
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
 RUN mkdir -p ${HOME}/.config/lxqt && \
         echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
