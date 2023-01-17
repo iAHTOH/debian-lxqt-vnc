@@ -16,7 +16,7 @@ ENV HOME=/home/headless
 RUN         apt-get update && \
             apt-get install -y dbus-x11 sudo mc openbox\
             tigervnc-standalone-server tigervnc-common \
-            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
+            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd liblxqt-l10n \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-session featherpad nano xterm \   
         && \
@@ -47,11 +47,11 @@ USER headless
 
 
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
-#RUN mkdir -p ${HOME}/.config/lxqt && \
-#        echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
-#        echo '__userfile__=true' >> ${HOME}/.config/lxqt/lxqt.conf && \
-#        echo 'theme=ambiance' >> ${HOME}/.config/lxqt/lxqt.conf &&\
-#        echo 'icon_theme=Papirus' >> ${HOME}/.config/lxqt/lxqt.conf \
+RUN mkdir -p ${HOME}/.config/lxqt && \
+        echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
+        echo '__userfile__=true' >> ${HOME}/.config/lxqt/lxqt.conf && \
+        echo 'theme=ambiance' >> ${HOME}/.config/lxqt/lxqt.conf &&\
+        echo 'icon_theme=Papirus' >> ${HOME}/.config/lxqt/lxqt.conf 
 #        && \
 #        echo 'Xcursor.theme: breeze_cursors' >> ${HOME}/.Xdefaults \
 #        && \
