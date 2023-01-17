@@ -35,7 +35,7 @@ RUN         apt-get update &&                              \
         && \
         rm -rf /var/cache/dnf/*
 
-EXPOSE 5901
+#EXPOSE 5901
 
 RUN /usr/bin/dbus-uuidgen --ensure && \
         useradd -m headless && \
