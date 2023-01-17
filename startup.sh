@@ -25,7 +25,7 @@ if { ! [file exists $HOME/.issetpassword] } {
     # change root user password
     spawn sudo passwd root
     expect "\\\[sudo\\\] password for headless:"
-    send "debian\r"
+    send "centos\r"
     expect "New password:"
     send "$ROOT_PASSWORD\r"
     expect "Retype new password:"
@@ -35,7 +35,7 @@ if { ! [file exists $HOME/.issetpassword] } {
     # change headless user password
     spawn passwd
     expect "Current password:"
-    send "debian\r"
+    send "centos\r"
     expect "New password:"
     send "$USER_PASSWORD\r"
     expect "Retype new password:"
