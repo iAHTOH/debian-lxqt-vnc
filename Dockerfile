@@ -13,20 +13,13 @@ LABEL maintainer="admin@iahtoh.ru" \
 ENV HOME=/home/headless
 
 
-RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections &&\
-            apt-get update &&                              \
+RUN         apt-get update &&                              \
             apt-get install -y -q                          \
-            xorg                                           \
-            tightvncserver                                 \
-            autocutsel                                     \
             openbox obconf-qt                              \
-            #lxqt-core \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-session \
-            #dejavu-sans-mono-fonts \
             pcmanfm-qt \
-            #dbus-x11 xorg \
             xterm nano htop expect sudo \
             passwd binutils wget mc \
         && \
@@ -34,19 +27,16 @@ RUN         echo 'debconf debconf/frontend select Noninteractive' | debconf-set-
         && \
         apt-get clean \
         && \
-        rm -rf /var/cache/dnf/*
+        rm -rf /var/lib/apt/lists/*
 
-#EXPOSE 5901
-
-RUN /usr/bin/dbus-uuidgen --ensure && \
+RUN     /usr/bin/dbus-uuidgen --ensure && \
         useradd -m headless && \
-        #addgroup wheel && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless
 
 
-COPY ./startup.sh ${HOME}
+COPY    ./startup.sh ${HOME}
 
 RUN     mkdir -p ${HOME}/.vnc \
         && \
@@ -60,8 +50,7 @@ RUN     mkdir -p ${HOME}/.vnc \
 WORKDIR ${HOME}
 USER headless
 
-# Disable the screen saver
-ADD .xscreensaver .
+
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
 RUN mkdir -p ${HOME}/.config/lxqt && \
         echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
