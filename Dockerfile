@@ -68,4 +68,4 @@ RUN mkdir -p ${HOME}/.config/lxqt && \
 #        echo 'apps\size=3' >> ${HOME}/.config/lxqt/panel.conf
 
 
-ENTRYPOINT ["expect", "./startup.sh"]
+ENTRYPOINT ["bash", "./startup.sh"]
