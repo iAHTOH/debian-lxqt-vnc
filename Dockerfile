@@ -69,4 +69,4 @@ RUN mkdir -p ${HOME}/.config/lxqt && \
 
 
 
-ENTRYPOINT ["expect", "./startup.sh"]
+#ENTRYPOINT ["expect", "./startup.sh"]
