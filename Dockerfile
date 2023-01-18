@@ -57,4 +57,5 @@ USER headless
 #RUN     vncserver -localhost no
 
 
-ENTRYPOINT ["./startup.sh"]
+#ENTRYPOINT ["./startup.sh"]
+CMD ["/bin/bash", "./startup.sh", "--no-exit"]
