@@ -16,10 +16,10 @@ ENV HOME=/home/headless
 RUN         apt-get update && \
             apt-get install -y dbus-x11 sudo mc openbox\
             tigervnc-standalone-server tigervnc-common \
-            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd liblxqt-l10n \
+            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
-            featherpad nano xterm \   
+            featherpad nano xterm synaptic \   
             && \
             apt-get clean \
             && \
