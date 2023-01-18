@@ -19,7 +19,7 @@ RUN         apt-get update && \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
-            featherpad nano xterm synaptic \   
+            featherpad nano qterminal synaptic \   
             && \
             apt-get clean \
             && \
