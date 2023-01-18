@@ -43,6 +43,8 @@ RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
         echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
         chmod 775 ${HOME}/.vnc/xstartup \
         && \
+        chmod 700 ${HOME}/.vnc/passwd \        
+        && \
         chown headless:headless -R ${HOME} 
 
 
