@@ -31,7 +31,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         useradd -m  -s /bin/bash headless && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
-        usermod -aG sudo headless && \
+        usermod -aG sudo headless
         
 
 ADD     headless ${HOME}       
