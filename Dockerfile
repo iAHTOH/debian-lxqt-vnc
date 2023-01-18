@@ -26,7 +26,7 @@ RUN         apt-get update && \
             rm -rf /var/lib/apt/lists/*
 
 RUN     /usr/bin/dbus-uuidgen --ensure && \
-        useradd -m -p debian -s /bin/bash -G sudo headless && \
+        useradd -m -p debian -s /bin/bash -G sudo headless headless && \
         echo "root:debian" | chpasswd 
         #echo "headless:debian" | chpasswd && \
         #usermod -aG sudo headless
