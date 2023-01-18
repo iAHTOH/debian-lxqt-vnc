@@ -26,10 +26,10 @@ RUN         apt-get update && \
             rm -rf /var/lib/apt/lists/*
 
 RUN     /usr/bin/dbus-uuidgen --ensure && \
-        useradd -m headless && \
-        echo "root:debian" | chpasswd && \
-        echo "headless:debian" | chpasswd && \
-        usermod -aG sudo headless
+        useradd -m -p debian -s /bin/bash -G sudo headless && \
+        echo "root:debian" | chpasswd 
+        #echo "headless:debian" | chpasswd && \
+        #usermod -aG sudo headless
 
 
 COPY    ./startup.sh ${HOME}
