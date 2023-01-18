@@ -37,10 +37,12 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless
 
-COPY ./startup.sh ${HOME}   
-RUN  chmod 775 ${HOME}/startup.sh
+ADD     headless ${HOME} 
+COPY    ./startup.sh ${HOME}  
+ 
 
-ADD     headless ${HOME}       
+
+      
 RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
         echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
         chmod 775 ${HOME}/.vnc/xstartup \
