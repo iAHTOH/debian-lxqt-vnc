@@ -38,7 +38,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         usermod -aG sudo headless
 
 COPY ./startup.sh ${HOME}   
-RUN chmod -c a+rX ${HOME}/startup.sh
+RUN  chmod 775 ${HOME}/startup.sh
 
 ADD     headless ${HOME}       
 RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
