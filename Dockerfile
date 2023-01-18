@@ -39,6 +39,9 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
 
 ADD     headless ${HOME} 
 COPY    ./startup.sh ${HOME}  
+RUN chmod -c a+rX ${HOME}/startup.sh
+RUN chmod +x ${HOME}/startup.sh
+
  
 
 
@@ -57,5 +60,5 @@ USER headless
 #RUN     vncserver -localhost no
 
 
-#ENTRYPOINT ["./startup.sh"]
-CMD ["/bin/bash", "./startup.sh", "--no-exit"]
+ENTRYPOINT ["${HOME}/startup.sh"]
+#CMD ["/bin/bash", "./startup.sh", "--no-exit"]
