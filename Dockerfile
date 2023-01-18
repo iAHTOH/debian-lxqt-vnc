@@ -21,6 +21,10 @@ RUN         apt-get update && \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
             featherpad nano qterminal synaptic \   
             && \
+            apt-get remove -y lxqt-powermanagement papirus-icon-theme adwaita-icon-theme gnome-icon-theme xfwm4-theme-breeze \
+            && \
+            apt-get autoremove -y \
+            && \
             apt-get clean \
             && \
             rm -rf /var/lib/apt/lists/*
