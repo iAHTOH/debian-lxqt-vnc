@@ -46,7 +46,8 @@ ADD     headless ${HOME}
 WORKDIR ${HOME}
 USER headless
 
-RUN     vncserver -localhost no
+RUN     chown headless:headless -R ${HOME} && \
+        vncserver -localhost no
 
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
 #RUN mkdir -p ${HOME}/.config/lxqt && \
