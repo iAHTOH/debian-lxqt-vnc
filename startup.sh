@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/bin/bash
 vncserver -localhost no
