@@ -32,7 +32,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         #usermod -aG sudo headless
 
 ADD     headless ${HOME}
-COPY    ./startup.sh ${HOME}
+#COPY    ./startup.sh ${HOME}
 
 #RUN     mkdir -p ${HOME}/.vnc \
 #        && \
