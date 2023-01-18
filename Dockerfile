@@ -35,7 +35,11 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         
 
 ADD     headless ${HOME}       
-RUN     chown headless:headless -R ${HOME} 
+RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
+        echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
+        chmod 775 ${HOME}/.vnc/xstartup \
+        && \
+        chown headless:headless -R ${HOME} 
 
 
 #COPY    ./startup.sh ${HOME}
