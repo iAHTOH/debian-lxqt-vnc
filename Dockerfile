@@ -36,7 +36,8 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless
-   
+
+COPY ./startup.sh ${HOME}   
 
 ADD     headless ${HOME}       
 RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
