@@ -25,14 +25,17 @@ RUN         apt-get update && \
             && \
             rm -rf /var/lib/apt/lists/*
 
-ADD     headless ${HOME}
+
 
 RUN     /usr/bin/dbus-uuidgen --ensure && \
         useradd -m  -s /bin/bash headless && \
         echo "root:debian" | chpasswd && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless && \
-        chown headless:headless -R ${HOME} 
+        
+
+ADD     headless ${HOME}       
+RUN     chown headless:headless -R ${HOME} 
 
 
 #COPY    ./startup.sh ${HOME}
