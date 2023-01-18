@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfwm4" version="1.0">
+  <property name="general" type="empty">
+    <property name="theme" type="empty"/>
+    <property name="repeat_urgent_blink" type="empty"/>
+    <property name="show_dock_shadow" type="empty"/>
+    <property name="urgent_blink" type="empty"/>
+    <property name="workspace_count" type="int" value="2"/>
+  </property>
+</channel>

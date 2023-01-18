@@ -1,0 +1,670 @@
+1.2
+lxde-applications.menu
+15
+D/home/headless/.local/share/desktop-directories
+D/usr/local/share/desktop-directories
+D/usr/share/desktop-directories
+D/home/headless/.local/share/applications
+D/usr/local/share/applications
+D/usr/share/applications
+D/usr/share/applications/screensavers
+D/usr/share/menus/applications-merged
+D/etc/xdg/menus/applications-merged
+D/etc/menus/applications-merged
+D/home/headless/.config/menus/applications-merged
+F/home/headless/.config/menus/lxde-applications.menu
+F/etc/menus/lxde-applications.menu
+F/etc/xdg/menus/lxde-applications.menu
+F/etc/xdg/menus/debian-menu.menu
+LXQt;MATE;
++Applications
+Applications
+Applications
+applications-other
+lxde-menu-applications.directory
+2
+0
++Accessories
+Accessories
+Desktop accessories
+applications-accessories
+lxde-utility.directory
+2
+0
+-featherpad.desktop
+FeatherPad
+Lightweight Qt text editor
+featherpad
+
+5
+Text Editor
+featherpad %U
+0
+0
+
+
+Qt;Utility;TextEditor
+Text,Editor,Plaintext
+-mcedit.desktop
+Midnight Commander editor
+Edit text files
+MidnightCommander
+
+5
+
+mcedit
+1
+0
+
+
+Utility;TextEditor
+editor,console,text
+-pcmanfm-qt.desktop
+PCManFM-Qt File Manager
+Browse the file system and manage the files
+system-file-manager
+
+5
+File Manager
+pcmanfm-qt %U
+2
+0
+
+
+FileManager;Utility;Core;Qt
+
+-qlipper.desktop
+Qlipper
+Clipboard history tool
+qlipper
+
+5
+Clipboard Tool
+qlipper
+0
+0
+qlipper
+
+Qt;Utility
+
+
++Graphics
+Graphics
+Graphics applications
+applications-graphics
+lxde-graphics.directory
+2
+0
+-lximage-qt.desktop
+LXImage
+The LXQt image viewer
+lximage-qt
+
+5
+Image Viewer
+lximage-qt %F
+2
+0
+
+
+Graphics;Viewer;RasterGraphics;2DGraphics;Photography
+
+-lximage-qt-screenshot.desktop
+Screenshot
+Take a screenshot
+camera-photo
+
+5
+Screenshot
+lximage-qt --screenshot
+2
+0
+
+
+Graphics;Core;Qt
+
+
++Multimedia
+Sound & Video
+Multimedia menu
+applications-multimedia
+lxde-audio-video.directory
+2
+0
+-pavucontrol-qt.desktop
+PulseAudio Volume Control
+Adjust the volume level
+multimedia-volume-control
+
+5
+Volume Control
+pavucontrol-qt
+2
+0
+
+
+AudioVideo;Audio;Mixer;Qt
+
+
++System
+System Tools
+System configuration and monitoring
+applications-system
+lxde-system-tools.directory
+2
+0
+-lxqt-about.desktop
+About LXQt
+Learn more about LXQt
+help-about
+
+5
+About LXQt
+lxqt-about
+0
+32
+
+
+System;Documentation
+
+-lxqt-hibernate.desktop
+Hibernate
+hibernate the machine
+system-suspend-hibernate
+
+5
+Hibernate
+lxqt-leave --hibernate
+0
+32
+
+
+System;X-Leave
+
+-lxqt-leave.desktop
+Leave
+Leave dialog
+system-shutdown
+
+5
+Leave
+lxqt-leave
+0
+32
+
+
+System;X-Leave
+
+-lxqt-lockscreen.desktop
+Lock Screen
+Lock the current session
+system-lock-screen
+
+5
+Lock Screen
+lxqt-leave --lockscreen
+0
+32
+
+
+System;Screensaver
+
+-lxqt-logout.desktop
+Logout
+Logout from the current session
+system-log-out
+
+5
+Logout
+lxqt-leave --logout
+0
+32
+
+
+System;X-Leave
+
+-mc.desktop
+Midnight Commander
+File manager
+MidnightCommander
+
+5
+
+mc
+1
+0
+
+
+ConsoleOnly;Utility;FileManager;System;FileTools
+file manager,console
+-qterminal.desktop
+QTerminal
+Terminal emulator
+utilities-terminal
+
+5
+Terminal emulator
+qterminal
+0
+0
+
+
+Qt;System;TerminalEmulator
+
+-qterminal_drop.desktop
+QTerminal drop down
+A drop-down terminal emulator.
+utilities-terminal
+
+5
+Drop-down Terminal
+qterminal --drop
+0
+0
+
+
+Qt;System;TerminalEmulator
+
+-lxqt-reboot.desktop
+Reboot
+reboot the machine
+system-reboot
+
+5
+Reboot
+lxqt-leave --reboot
+0
+32
+
+
+System;X-Leave
+
+-lxqt-shutdown.desktop
+Shutdown
+shutdown the machine
+system-shutdown
+
+5
+Shutdown
+lxqt-leave --shutdown
+0
+32
+
+
+System;X-Leave
+
+-lxqt-suspend.desktop
+Suspend
+suspend the machine
+system-suspend
+
+5
+Suspend
+lxqt-leave --suspend
+0
+32
+
+
+System;X-Leave
+
+-debian-uxterm.desktop
+UXTerm
+xterm wrapper for Unicode environments
+mini.xterm
+
+5
+
+uxterm
+0
+0
+
+
+System;TerminalEmulator
+shell,prompt,command,commandline,cmd
+-debian-xterm.desktop
+XTerm
+standard terminal emulator for the X window system
+mini.xterm
+
+5
+
+xterm
+0
+0
+
+
+System;TerminalEmulator
+shell,prompt,command,commandline,cmd
+-qps.desktop
+qps
+Qt application to display and manage running processes
+qps
+
+5
+Qt process manager
+qps
+0
+0
+qps
+
+System
+
+
+-
++DesktopSettings
+Preferences
+Personal preferences
+preferences-desktop
+lxde-settings.directory
+2
+0
+-org.debian.galternatives.desktop
+Alternatives Configurator
+Configure the system default alternatives
+galternatives
+
+5
+
+/usr/bin/galternatives
+2
+0
+
+
+Settings;GTK;System
+Alternatives,GAlternatives,Debian
+-lxqt-config-appearance.desktop
+Appearance
+Appearance settings for LXQt
+preferences-desktop-theme
+
+5
+Appearance settings
+lxqt-config-appearance
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-brightness.desktop
+Brightness
+Configure brightness
+brightnesssettings
+
+5
+Brightness Settings
+lxqt-config-brightness
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt;HardwareSettings
+
+-pcmanfm-qt-desktop-pref.desktop
+Desktop
+Change wallpapers and behavior of desktop manager
+user-desktop
+
+5
+Desktop Settings
+pcmanfm-qt --desktop-pref=general
+2
+0
+
+
+Settings;Qt;DesktopSettings
+
+-lxqt-config-notificationd.desktop
+Desktop Notifications
+Configure desktop notifications
+preferences-desktop-notification
+
+5
+LXQt Notification Settings
+lxqt-config-notificationd
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-file-associations.desktop
+File Associations
+Configure applications associated with known file types
+preferences-desktop-filetype-association
+
+5
+File Association Settings
+lxqt-config-file-associations
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-input.desktop
+Keyboard and Mouse
+Configure keyboard, mouse, and other input devices
+preferences-desktop-peripherals
+
+5
+Input settings
+lxqt-config-input
+0
+32
+
+
+Qt;Settings;HardwareSettings;DesktopSettings;LXQt
+
+-lxqt-config.desktop
+LXQt Configuration Center
+Configure your system
+preferences-system
+
+5
+System Settings
+lxqt-config
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-locale.desktop
+Locale
+Locale settings for LXQt
+preferences-desktop-locale
+
+5
+Locale settings
+lxqt-config-locale
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-monitor.desktop
+Monitor settings
+Configure monitors
+preferences-desktop-display
+
+5
+Monitor settings
+lxqt-config-monitor
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt;HardwareSettings
+
+-obconf.desktop
+Openbox Configuration Manager
+Tweak settings for Openbox
+obconf
+
+5
+Configuration Manager
+obconf %f
+2
+0
+
+
+Settings;DesktopSettings;GTK
+openbox,settings,configurations,themes
+-lxqt-config-powermanagement.desktop
+Power Management
+Various settings regarding Power Management like battery or idleness watcher
+preferences-system-power-management
+
+5
+Power Management Settings
+lxqt-config-powermanagement
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-system-config-printer.desktop
+Print Settings
+Configure printers
+printer
+
+5
+Print Settings
+system-config-printer
+2
+0
+
+
+System;Settings;HardwareSettings;Printing;GTK
+
+-xscreensaver-properties.desktop
+Screensaver
+Change screensaver properties
+xscreensaver
+
+5
+
+xscreensaver-demo
+0
+0
+
+
+Settings;DesktopSettings;Security;X-XFCE
+
+-lxqt-config-session.desktop
+Session Settings
+Configuration for LXQt sessions
+preferences-system-session-services
+
+5
+LXQt Session Settings
+lxqt-config-session
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-config-globalkeyshortcuts.desktop
+Shortcut Keys
+Configure shortcut keys in LXQt
+preferences-desktop-keyboard
+
+5
+Keyboard Shortcut Settings
+lxqt-config-globalkeyshortcuts
+0
+32
+
+
+Settings;DesktopSettings;Qt;LXQt
+
+-lxqt-xfwm-settings.desktop
+Window Manager
+Configure window behavior and shortcuts
+xfwm4
+
+5
+
+xfwm4-settings
+2
+32
+xfwm4-settings
+
+Settings;DesktopSettings;System
+
+-xfce-wm-settings.desktop
+Window Manager
+Configure window behavior and shortcuts
+org.xfce.xfwm4
+
+5
+
+xfwm4-settings
+2
+8
+
+
+XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings
+windows,management,settings,preferences,themes,styles,decorations,title bar,font,buttons,menu,minimize,maximize,shade,roll up,layout,keyboard shortcuts,focus,snapping,screen,workspaces,edges,corner,hide content,move,resize,moving,resizing,double click
+-lxqt-xfwmtweaks.desktop
+Window Manager Tweaks
+Fine-tune window behaviour and effects
+wmtweaks
+
+5
+
+xfwm4-tweaks-settings
+2
+32
+xfwm4-tweaks-settings
+
+Settings;DesktopSettings;System
+
+-xfce-wmtweaks-settings.desktop
+Window Manager Tweaks
+Fine-tune window behaviour and effects
+org.xfce.xfwm4-tweaks
+
+5
+
+xfwm4-tweaks-settings
+2
+8
+
+
+XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings
+windows,behavior,settings,preferences,cycling,cycle,switching,focus,raises,accessibility,key,dragging,move,moving,hide,frame,title bar,maximized,tile,screen,edge,hot corner,snapping,mouse wheel,roll up,workspaces,placement,compositor,compositing,enable,disable,shadows,decorations,opacity,resize,inactive,preview,compiz,transitions
+-xfce-workspaces-settings.desktop
+Workspaces
+Configure layout, names and margins
+org.xfce.workspaces
+
+5
+
+xfwm4-workspace-settings
+2
+8
+
+
+XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings
+workspaces,settings,preferences,virtual desktops,number,windows,screen,margins
+-lxqt-xfwm-workspaces.desktop
+Workspaces
+Configure layout, names and margins
+xfce4-workspaces
+
+5
+
+xfwm4-workspace-settings
+2
+32
+xfwm4-workspace-settings
+
+Settings;DesktopSettings;System
+
+
+

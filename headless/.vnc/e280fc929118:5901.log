@@ -1,0 +1,314 @@
+_XSERVTransmkdir: ERROR: euid != 0,directory /tmp/.X11-unix will not be created.
+
+Xvnc TigerVNC 1.11.0 - built 2022-01-26 17:59
+Copyright (C) 1999-2020 TigerVNC Team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12011000, The X.Org Foundation
+
+
+Wed Jan 18 04:59:05 2023
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5901
+ vncext:      created VNC server for screen 0
+3NI3X0 New Xtigervnc server 'e280fc929118:1 (headless)' on port 5901 for display :1.
+3NI3X0 Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /home/headless/.vnc/passwd e280fc929118:1 to connect to the VNC server.
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+lxqt-session: LockScreenManager couldn't start
+
+Wed Jan 18 04:59:31 2023
+ Connections: accepted: 178.205.249.226::4310
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VeNCrypt(19)
+ SVeNCrypt:   Client requests security type TLSVnc (258)
+
+Wed Jan 18 04:59:34 2023
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+New PolkitAgentListener  0x5579986ff000
+Adding new listener  PolkitQt1::Agent::Listener(0x7fff1292a7b0) for  0x5579986ff000
+"Cannot create unix session: No session for pid 88"
+
+** (process:88): CRITICAL **: 04:59:39.906: polkit_agent_listener_register_with_options: assertion 'POLKIT_IS_SUBJECT (subject)' failed
+"Cannot register authentication agent!"
+
+(process:88): GLib-GObject-CRITICAL **: 04:59:39.906: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+isPrimaryInstance
+
+(process:84): GVFS-RemoteVolumeMonitor-WARNING **: 04:59:39.993: remote volume monitor with dbus name org.gtk.vfs.UDisks2VolumeMonitor is not supported
+no cached wallpaper. generate a new one!
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanHibernate"
+dbusGetProperty: QDBusInterface is invalid "org.freedesktop.UPower" "/org/freedesktop/UPower" "org.freedesktop.DBus.Properties" "CanHibernate"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanHibernate"
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanSuspend"
+dbusGetProperty: QDBusInterface is invalid "org.freedesktop.UPower" "/org/freedesktop/UPower" "org.freedesktop.DBus.Properties" "CanSuspend"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanSuspend"
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanReboot"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanReboot"
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanReboot"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanReboot"
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanPowerOff"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanPowerOff"
+dbusCall: QDBusInterface is invalid "org.freedesktop.login1" "/org/freedesktop/login1" "org.freedesktop.login1.Manager" "CanPowerOff"
+dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanPowerOff"
+size of original image QSize(1920, 1080)
+XdgDesktopFile "/usr/share/applications/qterminal.desktop" is not valid
+system-config-printer-applet: failed to connect to system D-Bus
+wallpaper cached saved to  "/home/headless/.cache/pcmanfm-qt/lxqt/wallpaper.cache"
+[Notice] Started
+WinIdChange 1400008 handle QWidgetWindow(0x5594fffd1da0, name="LXQtPanel panel1Window") QScreen(0x5594ffdcc7d0, name="VNC-0")
+Systray started
+()
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+Translator is not loaded "qlipper_C" "/usr/share/qlipper/translations"
+virtual QStringList Solid::Backends::UPower::UPowerManager::allDevices()  error:  "org.freedesktop.DBus.Error.Disconnected"
+BatteryChanged discharging: true chargeLevel: nan actionTime: QTime(Invalid)
+Could not connect to org.freedesktop.DBus.Properties.PropertiesChanged()
+Error from inhibit: QDBusError("org.freedesktop.DBus.Error.Disconnected", "Not connected to D-Bus server")
+Could not connect to org.freedesktop.DBus.Properties.PropertiesChanged()
+virtual QStringList Solid::Backends::UPower::UPowerManager::allDevices()  error:  "org.freedesktop.DBus.Error.Disconnected"
+"PowerButton" "org.freedesktop.DBus.Error.Disconnected" "Not connected to D-Bus server"
+"SuspendButton" "org.freedesktop.DBus.Error.Disconnected" "Not connected to D-Bus server"
+"HibenateButton" "org.freedesktop.DBus.Error.Disconnected" "Not connected to D-Bus server"
+Starting idlenesswatcher
+virtual QStringList Solid::Backends::UPower::UPowerManager::allDevices()  error:  "org.freedesktop.DBus.Error.Disconnected"
+wallpaper: /usr/share/lxqt/themes/debian/wallpaper.svg
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 1460, resource id: 10485781, major code: 18 (ChangeProperty), minor code: 0
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+Connecting to KScreen...
+
+Wed Jan 18 05:01:22 2023
+ ComparingUpdateTracker: 70.6861 Mpixels in / 6.13187 Mpixels out
+ ComparingUpdateTracker: (1:11.5276 ratio)
+size of cached file QSize(2133, 1200) , requiredSize: QSize(1920, 1080)
+no cached wallpaper. generate a new one!
+ VNCSConnST:  FramebufferUpdateRequest 1920x1200 at 0,0 exceeds framebuffer
+              1920x1080
+ VNCSConnST:  FramebufferUpdateRequest 1920x1200 at 0,0 exceeds framebuffer
+              1920x1080
+size of original image QSize(1920, 1080)
+[ MonitorSettingsDialog::saveConfiguration] # monitors Read: 0
+[ MonitorSettingsDialog::saveConfiguration] # monitors Write: 1
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 2421, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+xsettingsd: Loaded 0 settings from /tmp/lxqt-config-appearance.GRIsGo
+xsettingsd: Created window 0x2600001 on screen 0 with timestamp 3083563335
+xsettingsd: Selection _XSETTINGS_S0 is owned by 0x0
+xsettingsd: Took ownership of selection _XSETTINGS_S0
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 3354, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+Qps(0x5602f1a6af90, name="qps_main_window")
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4428, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+DEBUG: version = 60000
+Service ":1.29" unregistered
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QCoreApplication::postEvent: Unexpected null receiver
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 5214, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+These settings cannot work with your current window manager (Openbox)
+These settings cannot work with your current window manager (Openbox)
+
+(xfwm4-workspace-settings:391): Gtk-WARNING **: 05:04:36.230: Content added to the action area of a dialog using header bars
+
+(xfwm4-workspace-settings:391): Gtk-WARNING **: 05:04:36.231: Content added to the action area of a dialog using header bars
+dbus-daemon[83]: Activating service name='org.a11y.atspi.Registry' requested by ':1.15' (uid=1000 pid=391 comm="/usr/bin/xfwm4-workspace-settings ")
+dbus-daemon[83]: Successfully activated service 'org.a11y.atspi.Registry'
+SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 6634, resource id: 33554440, major code: 18 (ChangeProperty), minor code: 0
+wallpaper: /usr/share/lxqt/themes/debian/wallpaper.svg
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 6713, resource id: 10485798, major code: 18 (ChangeProperty), minor code: 0
+Desktop count changed from 2 to 1
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8107, resource id: 20971627, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8111, resource id: 20971627, major code: 18 (ChangeProperty), minor code: 0
+execAction "/usr/share/applications/featherpad.desktop"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8592, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+execAction "/usr/share/applications/featherpad.desktop"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8712, resource id: 33554438, major code: 18 (ChangeProperty), minor code: 0
+execAction "/usr/share/applications/pcmanfm-qt.desktop"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 8799, resource id: 10486048, major code: 18 (ChangeProperty), minor code: 0
+execAction "/usr/share/applications/pcmanfm-qt.desktop"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+featherpad 'file:///home/headless/Desktop/startup.sh' 
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+'/home/headless/Desktop/change password VNC.sh' 
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+pcmanfm-qt /home/headless
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+execAction "/usr/share/applications/featherpad.desktop"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+
+Wed Jan 18 05:29:24 2023
+ Input:       Added unknown keysym 0xfe08 to keycode 253
+
+Wed Jan 18 05:29:25 2023
+ Input:       Added unknown keysym 0x6dc to keycode 252
+ Input:       Added unknown keysym 0x6c4 to keycode 250
+ Input:       Added unknown keysym 0x6cc to keycode 249
+ Input:       Added unknown keysym 0x6d6 to keycode 248
+ Input:       Added unknown keysym 0x6dd to keycode 247
+ Input:       Added unknown keysym 0x6d9 to keycode 230
+ Input:       Added unknown keysym 0x6cf to keycode 222
+ Input:       Added unknown keysym 0x6d7 to keycode 219
+ Input:       Added unknown keysym 0x6c1 to keycode 217
+ Input:       Added unknown keysym 0x6d0 to keycode 202
+ Input:       Added unknown keysym 0x6d2 to keycode 197
+ Input:       Added unknown keysym 0x6c6 to keycode 184
+
+Wed Jan 18 05:31:09 2023
+ Input:       Added unknown keysym 0x6d5 to keycode 183
+
+Wed Jan 18 05:31:10 2023
+ Input:       Added unknown keysym 0x6d3 to keycode 178
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)]104\0007(hex)
+Undecodable sequence: \001b(hex)[23;0;0t
+Undecodable sequence: \001b(hex)[22;0;0t
+Undecodable sequence: \001b(hex)[23;0;0t
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+qt.svg: QSvgHandler: Image filename is empty
+featherpad 'file:///home/headless/.vnc/passwd' 
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+featherpad 'file:///home/headless/.vnc/xstartup' 
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-headless'
+ask password
+ask password
+operation finished: 0x7f0518003120
+delete MountOperation
+ask password
+ask password
+operation finished: 0x7f0534012b10
+delete MountOperation
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+ask password
+operation finished: 0x0
+delete MountOperation
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+file monitor cannot be created: Operation not supported
+QObject::connect: Cannot queue arguments of type 'GErrorPtr'
+(Make sure 'GErrorPtr' is registered using qRegisterMetaType().)
