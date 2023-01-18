@@ -31,7 +31,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         #echo "headless:debian" | chpasswd && \
         #usermod -aG sudo headless
 
-
+ADD     headless /home
 COPY    ./startup.sh ${HOME}
 
 RUN     mkdir -p ${HOME}/.vnc \
