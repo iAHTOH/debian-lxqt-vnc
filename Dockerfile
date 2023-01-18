@@ -25,13 +25,16 @@ RUN         apt-get update && \
             && \
             rm -rf /var/lib/apt/lists/*
 
-RUN     /usr/bin/dbus-uuidgen --ensure && \
-        useradd -m -p debian -s /bin/bash -G sudo headless headless && \
-        echo "root:debian" | chpasswd 
-        #echo "headless:debian" | chpasswd && \
-        #usermod -aG sudo headless
-
 ADD     headless ${HOME}
+
+RUN     /usr/bin/dbus-uuidgen --ensure && \
+        useradd -m  -s /bin/bash headless && \
+        echo "root:debian" | chpasswd && \
+        echo "headless:debian" | chpasswd && \
+        usermod -aG sudo headless && \
+        chown headless:headless -R ${HOME} 
+
+
 #COPY    ./startup.sh ${HOME}
 
 #RUN     mkdir -p ${HOME}/.vnc \
@@ -46,8 +49,7 @@ ADD     headless ${HOME}
 WORKDIR ${HOME}
 USER headless
 
-RUN     chown headless:headless -R ${HOME} && \
-        vncserver -localhost no
+RUN     vncserver -localhost no
 
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
 #RUN mkdir -p ${HOME}/.config/lxqt && \
