@@ -34,25 +34,26 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
 ADD     headless ${HOME}
 COPY    ./startup.sh ${HOME}
 
-RUN     mkdir -p ${HOME}/.vnc \
-        && \
-        echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
-        echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
-        chmod 775 ${HOME}/.vnc/xstartup \
-        && \
-        chown headless:headless -R ${HOME}
+#RUN     mkdir -p ${HOME}/.vnc \
+#        && \
+#        echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
+#        echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
+#        chmod 775 ${HOME}/.vnc/xstartup \
+#        && \
+#        chown headless:headless -R ${HOME}
 
 
 WORKDIR ${HOME}
 USER headless
 
+RUN     vncserver -localhost no
 
 # apply plazma theme, wallpaper, qterimal and pcman to quicklaunch
-RUN mkdir -p ${HOME}/.config/lxqt && \
-        echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
-        echo '__userfile__=true' >> ${HOME}/.config/lxqt/lxqt.conf && \
-        echo 'theme=ambiance' >> ${HOME}/.config/lxqt/lxqt.conf &&\
-        echo 'icon_theme=Papirus' >> ${HOME}/.config/lxqt/lxqt.conf 
+#RUN mkdir -p ${HOME}/.config/lxqt && \
+#        echo '[General]' >> ${HOME}/.config/lxqt/lxqt.conf && \
+#        echo '__userfile__=true' >> ${HOME}/.config/lxqt/lxqt.conf && \
+#        echo 'theme=ambiance' >> ${HOME}/.config/lxqt/lxqt.conf &&\
+#        echo 'icon_theme=Papirus' >> ${HOME}/.config/lxqt/lxqt.conf 
 #        && \
 #        echo 'Xcursor.theme: breeze_cursors' >> ${HOME}/.Xdefaults \
 #        && \
