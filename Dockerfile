@@ -50,7 +50,7 @@ RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
 WORKDIR ${HOME}
 USER headless
 
-RUN     vncserver -localhost no
+#RUN     vncserver -localhost no
 
 
 ENTRYPOINT ["./startup.sh"]
