@@ -20,15 +20,12 @@ RUN         apt-get update && \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
             featherpad nano qterminal synaptic \   
-            #&& \
-            #apt-get remove -y lxqt-powermanagement papirus-icon-theme adwaita-icon-theme gnome-icon-theme xfwm4-theme-breeze \
-            && \
-            apt-get autoremove -y \
             && \
             apt-get clean \
             && \
+            apt-get autoremove -y \
+            && \
             rm -rf /var/lib/apt/lists/*
-
 
 
 RUN     /usr/bin/dbus-uuidgen --ensure && \
@@ -41,9 +38,6 @@ ADD     headless ${HOME}
 COPY    ./startup.sh ${HOME}  
 RUN chmod -c a+rX ${HOME}/startup.sh
 RUN chmod +x ${HOME}/startup.sh
-
- 
-
 
       
 RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
@@ -61,4 +55,3 @@ USER headless
 
 
 ENTRYPOINT ["./startup.sh"]
-#CMD ["/bin/bash", "./startup.sh", "--no-exit"]
