@@ -1,3 +1,3 @@
 #!/bin/bash
-vncserver -localhost no
+spawn /usr/bin/vncserver :1 -fg -geometry 1920x1080
 exec "$@"
