@@ -34,10 +34,14 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless
 
+COPY    ./startup.sh ${HOME}  
+RUN chmod -c a+rX ${HOME}/startup.sh
+ENTRYPOINT ["/startup.sh"]
 ADD     headless ${HOME} 
 #COPY    ./startup.sh ${HOME}  
 #RUN chmod -c a+rX ${HOME}/startup.sh
 #RUN chmod +x ${HOME}/startup.sh
+
 
       
 RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
@@ -52,6 +56,4 @@ WORKDIR ${HOME}
 USER headless
 
 #RUN     vncserver -localhost no
-COPY    ./startup.sh ${HOME}  
-RUN chmod -c a+rX ${HOME}/startup.sh
-ENTRYPOINT ["/startup.sh"]
+
