@@ -35,7 +35,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         usermod -aG sudo headless
 
 ADD     headless ${HOME} 
-COPY    ./startup.sh ${HOME}  
+#COPY    ./startup.sh ${HOME}  
 #RUN chmod -c a+rX ${HOME}/startup.sh
 #RUN chmod +x ${HOME}/startup.sh
 
@@ -52,5 +52,6 @@ WORKDIR ${HOME}
 USER headless
 
 #RUN     vncserver -localhost no
-
-ENTRYPOINT ["expect", "./startup.sh"]
+COPY    ./startup.sh ${HOME}  
+RUN chmod -c a+rX ${HOME}/startup.sh
+ENTRYPOINT ["/entrypoint.sh"]
