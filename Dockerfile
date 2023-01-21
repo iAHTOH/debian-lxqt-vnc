@@ -54,4 +54,4 @@ USER headless
 #RUN     vncserver -localhost no
 COPY    ./startup.sh ${HOME}  
 RUN chmod -c a+rX ${HOME}/startup.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/startup.sh"]
