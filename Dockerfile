@@ -36,7 +36,7 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
 
 COPY    ./startup.sh ${HOME}  
 RUN chmod -c a+rX ${HOME}/startup.sh
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["${HOME}/startup.sh"]
 ADD     headless ${HOME} 
 #COPY    ./startup.sh ${HOME}  
 #RUN chmod -c a+rX ${HOME}/startup.sh
