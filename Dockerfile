@@ -34,13 +34,12 @@ RUN     /usr/bin/dbus-uuidgen --ensure && \
         echo "headless:debian" | chpasswd && \
         usermod -aG sudo headless
 
-COPY    ./startup.sh ${HOME}  
-RUN chmod 777 ${HOME}/startup.sh
-ENTRYPOINT ["/home/headless/startup.sh"]
+
 ADD     headless ${HOME} 
 #COPY    ./startup.sh ${HOME}  
-#RUN chmod -c a+rX ${HOME}/startup.sh
-#RUN chmod +x ${HOME}/startup.sh
+RUN chmod -c a+rX ${HOME}/startup.sh
+RUN chmod +x ${HOME}/startup.sh
+ENTRYPOINT ["/home/headless/startup.sh"]
 
 
       
