@@ -19,7 +19,7 @@ RUN         apt-get update && \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
-            featherpad nano qterminal synaptic \   
+            featherpad spawn-fcgi nano qterminal synaptic \   
             && \
             apt-get clean \
             && \
@@ -54,4 +54,4 @@ USER headless
 #RUN     vncserver -localhost no
 
 
-#ENTRYPOINT ["./startup.sh"]
+ENTRYPOINT ["./startup.sh"]
