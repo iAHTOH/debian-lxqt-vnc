@@ -53,5 +53,4 @@ USER headless
 
 #RUN     vncserver -localhost no
 
-
-ENTRYPOINT ["./startup.sh"]
+ENTRYPOINT ["expect", "./startup.sh"]
