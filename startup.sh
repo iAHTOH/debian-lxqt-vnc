@@ -1,4 +1,4 @@
-#!/usr/bin/expec
+#!/usr/bin/bash
 set SCREEN_RESOLUTION 1920x1080
 catch {set SCREEN_RESOLUTION $env(resolution)}
 
