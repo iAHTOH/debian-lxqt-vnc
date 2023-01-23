@@ -1,5 +1,11 @@
 
 FROM x11docker/lxqt:latest
 
-RUN apt-get update \
-    && apt-get install -y x11vnc net-tools xvfb
+RUN apt update -y \
+    && apt install -y \
+      xvfb \
+      x11vnc
+
+COPY docker_entrypoint /usr/local/bin/docker_entrypoint
+
+ENTRYPOINT ["/usr/local/bin/docker_entrypoint"]
