@@ -16,17 +16,14 @@ ENV HOME=/home/headless
 RUN         apt-get update && \
             apt-get install -y --no-install-recommends --allow-unauthenticated \
             sudo mc net-tools openbox \
-            #tigervnc-standalone-server tigervnc-common \
-            dbus-x11 x11-utils alsa-utils mesa-utils libgl1-mesa-dri\            
-            featherpad spawn-fcgi nano qterminal synaptic \   
+            dbus-x11 x11-utils alsa-utils mesa-utils libgl1-mesa-dri\              
             && apt autoclean -y \
             && apt autoremove -y \
             && rm -rf /var/lib/apt/lists/*
 
 RUN         apt update \
             && apt install -y --no-install-recommends --allow-unauthenticated \
-            xvfb x11vnc \
-            vim-tiny firefox \
+            xvfb x11vnc \            
             && apt autoclean -y \
             && apt autoremove -y \
             && rm -rf /var/lib/apt/lists/* 
@@ -36,6 +33,7 @@ RUN         apt update \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
+            featherpad spawn-fcgi nano qterminal synaptic \ 
             && apt autoclean -y \
             && apt autoremove -y \
             && rm -rf /var/lib/apt/lists/*
