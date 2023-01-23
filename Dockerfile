@@ -14,25 +14,40 @@ ENV HOME=/home/headless
 
 
 RUN         apt-get update && \
-            apt-get install -y dbus-x11 sudo mc openbox\
-            tigervnc-standalone-server tigervnc-common \
+            apt-get install -y --no-install-recommends --allow-unauthenticated \
+            sudo mc net-tools openbox \
+            #tigervnc-standalone-server tigervnc-common \
+            dbus-x11 x11-utils alsa-utils mesa-utils libgl1-mesa-dri\            
+            featherpad spawn-fcgi nano qterminal synaptic \   
+            && apt autoclean -y \
+            && apt autoremove -y \
+            && rm -rf /var/lib/apt/lists/*
+
+RUN         apt update \
+            && apt install -y --no-install-recommends --allow-unauthenticated \
+            xvfb x11vnc \
+            vim-tiny firefox \
+            && apt autoclean -y \
+            && apt autoremove -y \
+            && rm -rf /var/lib/apt/lists/* 
+           
+RUN         apt update \
+            && apt install -y --no-install-recommends --allow-unauthenticated \
             lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
             lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
             lxqt-theme-debian lxqt-branding-debian lxqt-session \
-            featherpad spawn-fcgi nano qterminal synaptic \   
-            && \
-            apt-get clean \
-            && \
-            apt-get autoremove -y \
-            && \
-            rm -rf /var/lib/apt/lists/*
+            && apt autoclean -y \
+            && apt autoremove -y \
+            && rm -rf /var/lib/apt/lists/*
 
 
-RUN     /usr/bin/dbus-uuidgen --ensure && \
-        useradd -m  -s /bin/bash headless && \
-        echo "root:debian" | chpasswd && \
-        echo "headless:debian" | chpasswd && \
-        usermod -aG sudo headless
+RUN         /usr/bin/dbus-uuidgen --ensure && \
+            useradd -m  -s /bin/bash headless && \
+            echo "root:debian" | chpasswd && \
+            echo "headless:debian" | chpasswd && \
+            usermod -aG sudo headless
+
+       
 
 
 ADD     headless ${HOME} 
