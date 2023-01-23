@@ -1,5 +1,5 @@
 
-FROM x11docker/lxqt:latest
+FROM lexaheda/lxqt:latest
 
 RUN apt update -y \
     && apt install -y \
