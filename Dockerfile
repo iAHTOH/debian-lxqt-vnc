@@ -47,6 +47,6 @@ CMD \
     x11vnc -display :1 -xkb -forever -rfbauth /root/.x11vnc/passwd & \
   fi && \
 # NoVNC
-  openssl req -new -x509 -days 36500 -nodes -batch -out /root/noVNC.pem -keyout /root/noVNC.pem && \
-  ln -s /root/noVNC/vnc.html /root/noVNC/index.html && \
-  /root/noVNC/utils/launch.sh --vnc localhost:5900 --cert /root/noVNC.pem --ssl-only
+#  openssl req -new -x509 -days 36500 -nodes -batch -out /root/noVNC.pem -keyout /root/noVNC.pem && \
+#  ln -s /root/noVNC/vnc.html /root/noVNC/index.html && \
+#  /root/noVNC/utils/launch.sh --vnc localhost:5900 --cert /root/noVNC.pem --ssl-only
