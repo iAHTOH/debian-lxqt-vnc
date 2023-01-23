@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+Xvfb $DISPLAY -screen 0 $RESOLUTION &
+x11vnc -forever -rfbport 5900
