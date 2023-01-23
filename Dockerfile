@@ -45,7 +45,8 @@ CMD \
     mkdir ~/.x11vnc && \
     x11vnc -storepasswd $VNC_PASSWD /root/.x11vnc/passwd && \
     x11vnc -display :1 -xkb -forever -rfbauth /root/.x11vnc/passwd & \
-#  fi && \
+  fi && \
+    rm -rf /var/lib/apt/lists/*  
 # NoVNC
 #  openssl req -new -x509 -days 36500 -nodes -batch -out /root/noVNC.pem -keyout /root/noVNC.pem && \
 #  ln -s /root/noVNC/vnc.html /root/noVNC/index.html && \
