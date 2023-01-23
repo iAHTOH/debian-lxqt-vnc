@@ -12,60 +12,41 @@ LABEL maintainer="admin@iahtoh.ru" \
 
 ENV HOME=/home/headless
 
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN         apt-get update && \
-            apt-get install -y --no-install-recommends --allow-unauthenticated \
-            sudo mc net-tools openbox \
-            dbus-x11 x11-utils alsa-utils mesa-utils libgl1-mesa-dri\              
-            && apt autoclean -y \
-            && apt autoremove -y \
-            && rm -rf /var/lib/apt/lists/*
+RUN \
+  apt-get update && \
+  apt-get install -y \
+# X Server
+  xvfb \
+# VNC Server
+  x11vnc \
+# Openbox
+  openbox menu \
+# NoVNC with dependencies
+  git net-tools python-numpy && \
+  # must switch to a release tag once the ssl-only arg included
+  git clone https://github.com/novnc/noVNC /root/noVNC && \
+  git clone --branch v0.8.0 https://github.com/novnc/websockify /root/noVNC/utils/websockify && \
+# Clean up the apt cache
+  rm -rf /var/lib/apt/lists/*
 
-RUN         apt update \
-            && apt install -y --no-install-recommends --allow-unauthenticated \
-            xvfb x11vnc \            
-            && apt autoclean -y \
-            && apt autoremove -y \
-            && rm -rf /var/lib/apt/lists/* 
-           
-RUN         apt update \
-            && apt install -y --no-install-recommends --allow-unauthenticated \
-            lxqt-about lxqt-config lxqt-globalkeys lxqt-notificationd \
-            lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-runner \
-            lxqt-theme-debian lxqt-branding-debian lxqt-session \
-            featherpad spawn-fcgi nano qterminal synaptic \ 
-            && apt autoclean -y \
-            && apt autoremove -y \
-            && rm -rf /var/lib/apt/lists/*
-
-
-RUN         /usr/bin/dbus-uuidgen --ensure && \
-            useradd -m  -s /bin/bash headless && \
-            echo "root:debian" | chpasswd && \
-            echo "headless:debian" | chpasswd && \
-            usermod -aG sudo headless
-
-       
-
-
-ADD     headless ${HOME} 
-#COPY    ./startup.sh ${HOME}  
-RUN chmod -c a+rX ${HOME}/startup.sh
-RUN chmod +x ${HOME}/startup.sh
-#ENTRYPOINT ["/home/headless/startup.sh"]
-
-
-      
-RUN     echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
-        echo 'exec startlxqt' >> ${HOME}/.vnc/xstartup && \
-        chmod 775 ${HOME}/.vnc/xstartup \
-        && \
-        chmod 700 ${HOME}/.vnc/passwd \        
-        && \
-        chown headless:headless -R ${HOME} 
-
-WORKDIR ${HOME}
-USER headless
-
-#RUN     vncserver -localhost no
-
+CMD \
+# X Server
+  Xvfb :1 -screen 0 1920x1080x16 & \
+# Openbox
+  (export DISPLAY=:1 && openbox-session) & \
+# VNC Server
+  if [ -z $VNC_PASSWD ]; then \
+    # no password
+    x11vnc -display :1 -xkb -forever & \
+  else \
+    # set password from VNC_PASSWD env variable
+    mkdir ~/.x11vnc && \
+    x11vnc -storepasswd $VNC_PASSWD /root/.x11vnc/passwd && \
+    x11vnc -display :1 -xkb -forever -rfbauth /root/.x11vnc/passwd & \
+  fi && \
+# NoVNC
+  openssl req -new -x509 -days 36500 -nodes -batch -out /root/noVNC.pem -keyout /root/noVNC.pem && \
+  ln -s /root/noVNC/vnc.html /root/noVNC/index.html && \
+  /root/noVNC/utils/launch.sh --vnc localhost:5900 --cert /root/noVNC.pem --ssl-only
