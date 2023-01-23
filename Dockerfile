@@ -24,7 +24,7 @@ RUN \
 # Openbox
   openbox menu \
 # NoVNC with dependencies
-  git net-tools python-numpy && \
+  git net-tools && \
   # must switch to a release tag once the ssl-only arg included
   git clone https://github.com/novnc/noVNC /root/noVNC && \
   git clone --branch v0.8.0 https://github.com/novnc/websockify /root/noVNC/utils/websockify && \
